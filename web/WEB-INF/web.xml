@@ -14,4 +14,39 @@
         <url-pattern>/view</url-pattern>
     </servlet-mapping>
 
+
+    <!-- index servlet -->
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>servlets.IndexServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- registration servlet -->
+    <servlet>
+        <servlet-name>signup</servlet-name>
+        <servlet-class>servlets.RegistrationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>signup</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+
+    <!-- login servlet -->
+    <servlet>
+        <servlet-name>signin</servlet-name>
+        <servlet-class>servlets.SignInServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>signin</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+
 </web-app>
