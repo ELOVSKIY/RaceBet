@@ -13,6 +13,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <servlet.version>4.0.0</servlet.version>
         <jsp.version>2.3.1</jsp.version>
+        <mysql.version>8.0.22</mysql.version>
     </properties>
 
     <dependencies>
@@ -34,5 +35,11 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
     </dependencies>
 </project>

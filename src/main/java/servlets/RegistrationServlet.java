@@ -3,6 +3,8 @@ package servlets;
 import entities.User;
 import model.IModel;
 import model.Model;
+import model.database.dao.UserDao;
+import model.database.dao.UserDaoImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,15 +29,9 @@ public class RegistrationServlet extends HttpServlet {
         String password = req.getParameter("pass");
 
         User user = new User(name, surname, password, login);
+        UserDao dao = new UserDaoImpl();
+        dao.registerUser(user);
         IModel model = Model.getInstance();
-
-        if (!model.CheckRegistration(user)) {
-            model.RegisterNewUser(user);
-            req.setAttribute("userName", user);
-        }
-        else
-            req.setAttribute("userName", null);
-
 
         doGet(req, resp);
     }
