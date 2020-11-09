@@ -14,7 +14,7 @@
 
 <div>       <!-- content -->
   <div>    <!-- buttons holder -->
-    <button onclick="location.href='/sign_in'">Sign In</button>
+    <button onclick="location.href='/signin'">Sign In</button>
 
     <button onclick="location.href='/sign_up'">Sign Up</button>
 
